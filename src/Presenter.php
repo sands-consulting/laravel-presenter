@@ -101,8 +101,9 @@ class Presenter
         }
 
         $params = $this->getOption('routeParams');
-        if (isset($params['presentUsing'])) {
-            $extension = $params['presentUsing'];
+        $format = app('request')->input('format');
+        if ($format || isset($params['presentUsing'])) {
+            $extension = $format ?: $params['presentUsing'];
             if (!in_array($extension, array_keys($this->extensions))) {
                 abort(404);
             }

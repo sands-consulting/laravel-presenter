@@ -48,11 +48,13 @@ public function index()
 }
 ```
 
-Laravel will automatically return the response in the preferred format. Format detection is done via the `Accept` header or via the `extension` request parameter.
+Laravel will automatically return the response in the preferred format. Format detection is done via the `Accept` header, via the `format` query string or via the `presentUsing ` request parameter.
 
 Request `Accept` header with the `application/json` value will return the `json` format while `text/html` will return a rendered Blade view.
 
-You can also define the response type via the `presentUsing` route parameter:
+You can also define the response type by appending `?format={presenter}` in the URL. This is particularly helpful for download links.
+
+Alternatively can also define the response type via the `presentUsing` route parameter:
 
 ```php
 // in your routes file
