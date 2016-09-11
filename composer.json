@@ -1,0 +1,23 @@
+{
+    "name": "sands/laravel-presenter",
+    "description": "Present Your Responses in Various Formats for Laravel 5+",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zulfa Juniadi bin Zulkifli",
+            "email": "zulfajuniadi@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "illuminate/support": "5.*",
+        "illuminate/http": "5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sands\\Presenter\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}
